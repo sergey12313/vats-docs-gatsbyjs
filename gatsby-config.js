@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
+    title: `Vats docs`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
