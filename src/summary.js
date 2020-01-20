@@ -1,13 +1,14 @@
 const menuType = {
     header: 1,
     item:2,
-    chapter:3
+    chapter:3,
+    itemMain: 4
 
 };
 exports.menuType = menuType;
 exports.menu = [
     {type: menuType.header, title:"Документация ВАТС"},
-    {type: menuType.item, title: "Введение", path: '/'},
+    {type: menuType.itemMain, title: "Введение", path: '/'},
     {type: menuType.header, title:"Начало работы с порталом"},
     {type: menuType.item, title: "Веб-кабинет пользователя", path: '/work-start/web-cabinet.mdx'},
     {type: menuType.item, title: "Главная страница веб-кабинета ВАТС", path: '/work-start/main-page.mdx'},
