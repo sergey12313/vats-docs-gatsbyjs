@@ -1,9 +1,9 @@
 const path = require(`path`)
-const { menu } = require("./src/summary")
+const { menu, menuType } = require("./src/summary")
 
 const getPathsFromMenuItems = items => {
   return items.reduce((acc, curr) => {
-    if (!curr.path) {
+    if (!curr.path || curr.type === menuType.itemMain) {
       return acc
     }
     if (curr.child) {
@@ -20,7 +20,6 @@ const getPathsFromMenuItems = items => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-
   getPathsFromMenuItems(menu).forEach(node => {
     createPage({
       path: node.path,
