@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: `/docs`,
   siteMetadata: {
     title: `Vats docs`,
   },
