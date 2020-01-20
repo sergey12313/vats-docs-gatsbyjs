@@ -13,9 +13,6 @@ export default ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     mdx(fileAbsolutePath: { regex: $slug }) {
-      frontmatter {
-        title
-      }
       body
     }
   }
